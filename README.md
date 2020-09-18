@@ -1,5 +1,5 @@
 # Blackfish Fire Support
-Script that adds and ability to call V-44X Blackfish as close air support to any location. 
+Script that adds and ability to call V-44X Blackfish as close air support to any location in the **Arma 3** game. 
 You may modify and share this script as you want but please keep license and add original author as well as a link to original repo. 
 ## Setup
 * Download all files and place them in to the mission folder.
