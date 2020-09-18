@@ -92,7 +92,7 @@ supportPilot disableAI "AUTOTARGET";
 supportPilot disableAI "TARGET";
 
 // Disable VCOM AI on crew
-/*
+
 supportPilotGroup setVariable ["VCM_NOFLANK",true];
 supportPilotGroup setVariable ["VCM_NORESCUE",true];
 supportPilotGroup setVariable ["VCM_TOUGHSQUAD",true];
@@ -105,7 +105,7 @@ _supportSwitchSide setVariable ["VCM_TOUGHSQUAD",true];
 _supportSwitchSide setVariable ["Vcm_Disable",true];
 _supportSwitchSide setVariable ["VCM_DisableForm",true];
 _supportSwitchSide setVariable ["VCM_Skilldisable",true];
-*/
+
 // End of VCOM AI part
 
 _wp = supportPilotGroup addWaypoint [getPos targetPersistent, 0];
