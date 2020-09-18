@@ -9,8 +9,8 @@ _nil = [] spawn {
 	[
 		casOperator,
 		"Call CAS",
-		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
-		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 		"('ItemRadio' in assignedItems _this) and (currentWeapon _this in ['Laserdesignator']) and ((((getPos laserTarget casOperator) select 0) > 1) and (((getPos laserTarget casOperator) select 1) > 1))",
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and ((((getPos laserTarget casOperator) select 0) > 1) and (((getPos laserTarget casOperator) select 1) > 1))",
 		{},

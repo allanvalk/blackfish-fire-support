@@ -48,8 +48,8 @@ supportRTB = {
 	[
 		casOperator,
 		"Call CAS",
-		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
-		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
 		"('ItemRadio' in assignedItems _this) and (currentWeapon _this in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		{},
@@ -90,6 +90,23 @@ supportPilot disableAI "AUTOCOMBAT";
 supportPilot disableAI "COVER";
 supportPilot disableAI "AUTOTARGET";
 supportPilot disableAI "TARGET";
+
+// Disable VCOM AI on crew
+/*
+supportPilotGroup setVariable ["VCM_NOFLANK",true];
+supportPilotGroup setVariable ["VCM_NORESCUE",true];
+supportPilotGroup setVariable ["VCM_TOUGHSQUAD",true];
+supportPilotGroup setVariable ["Vcm_Disable",true];
+supportPilotGroup setVariable ["VCM_DisableForm",true];
+supportPilotGroup setVariable ["VCM_Skilldisable",true];
+_supportSwitchSide setVariable ["VCM_NOFLANK",true];
+_supportSwitchSide setVariable ["VCM_NORESCUE",true];
+_supportSwitchSide setVariable ["VCM_TOUGHSQUAD",true];
+_supportSwitchSide setVariable ["Vcm_Disable",true];
+_supportSwitchSide setVariable ["VCM_DisableForm",true];
+_supportSwitchSide setVariable ["VCM_Skilldisable",true];
+*/
+// End of VCOM AI part
 
 _wp = supportPilotGroup addWaypoint [getPos targetPersistent, 0];
 _wp setWaypointType "LOITER";
