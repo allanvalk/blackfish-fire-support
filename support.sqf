@@ -9,7 +9,11 @@ _targetPoint = (_this select 0);
 _supportTime = (_this select 1);
 _supportCooldown = (_this select 2);
 _spawnPoint = (_this select 3);
+_flightHeight = (_this select 4);
+_flightRadius = (_this select 5);
 
+flightHeightPersistent = _flightHeight;
+flightRadiusPersistent = _flightRadius;
 spawnPointPersistent = _spawnPoint;
 targetPersistent = "Land_HelipadEmpty_F" createVehicle position _targetPoint;
 
@@ -48,7 +52,7 @@ supportRTB = {
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		{},
 		{},
-		{ [laserTarget casOperator, 120, 60, spawnPointPersistent] execVM "support.sqf"; },
+		{ [laserTarget casOperator, 120, 60, spawnPointPersistent, flightHeightPersistent, flightRadiusPersistent] execVM "support.sqf"; },
 		{},
 		[],
 		5,
@@ -78,9 +82,9 @@ supportPilot disableAI "COVER";
 _wp = supportPilotGroup addWaypoint [getPos targetPersistent, 0];
 _wp setWaypointType "LOITER";
 [supportPilotGroup, currentWaypoint supportPilotGroup] setWaypointLoiterType "CIRCLE_L";
-[supportPilotGroup, currentWaypoint supportPilotGroup] setWaypointLoiterRadius 350;
-supportVehicle flyInHeightASL [450, 450, 450];
-supportVehicle flyInHeight 450;
+[supportPilotGroup, currentWaypoint supportPilotGroup] setWaypointLoiterRadius flightRadiusPersistent;
+supportVehicle flyInHeightASL [flightHeightPersistent, flightHeightPersistent, flightHeightPersistent];
+supportVehicle flyInHeight flightHeightPersistent;
 
 supportVehicle setEffectiveCommander supportActiveCommander;
 
