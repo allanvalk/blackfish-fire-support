@@ -16,6 +16,9 @@ You may modify and share this script as you want but please keep license and add
 * Place unit that should be able to call CAS and set its variable name to `casOperator`.
 * Make sure unit has **radio** and **laser designator** equipped.
 
+## Usage
+In the mission playing as a unit with variable name `casOperator` you need to equip laser designator with classname `[Laserdesignator]` default one with sand texture. As soon as designator is in your hands you need to switch it to **on** and action to (Call CAS) will appear. Hold space or enter on it until it disappears. Now CAS is called and will arrive corresponding to the distance from spawn point to target.
+
 ## Known Bugs
 * ~~`laserTarget casOperator != objNull` condition doesn't care if laser off, because for some reason laser target constantly exits at unknown coordinates.~~ - Fixed
 * Make sure unit has designator batteries and laser designator is **on**.
