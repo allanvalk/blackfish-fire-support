@@ -1,0 +1,115 @@
+class CfgSounds
+{
+	sounds[] = {};	
+	class Sound_supportArrive_0
+	{	
+		name = "supportArrive_0";
+		sound[] = { "sounds\supportArrive_0.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportArrive_1
+	{	
+		name = "supportArrive_1";
+		sound[] = { "sounds\supportArrive_1.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportArrive_2
+	{	
+		name = "supportArrive_2";
+		sound[] = { "sounds\supportArrive_2.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportLeave_0
+	{	
+		name = "supportLeave_0";
+		sound[] = { "sounds\supportLeave_0.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportLeave_1
+	{	
+		name = "supportLeave_1";
+		sound[] = { "sounds\supportLeave_1.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportLeave_2
+	{	
+		name = "supportLeave_2";
+		sound[] = { "sounds\supportLeave_2.ogg", 2, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_0
+	{	
+		name = "supportChatter_0";
+		sound[] = { "sounds\supportChatter_0.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_1
+	{	
+		name = "supportChatter_1";
+		sound[] = { "sounds\supportChatter_1.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_2
+	{	
+		name = "supportChatter_2";
+		sound[] = { "sounds\supportChatter_2.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_3
+	{	
+		name = "supportChatter_3";
+		sound[] = { "sounds\supportChatter_3.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_4
+	{	
+		name = "supportChatter_4";
+		sound[] = { "sounds\supportChatter_4.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_5
+	{	
+		name = "supportChatter_5";
+		sound[] = { "sounds\supportChatter_5.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_6
+	{	
+		name = "supportChatter_6";
+		sound[] = { "sounds\supportChatter_6.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_7
+	{	
+		name = "supportChatter_7";
+		sound[] = { "sounds\supportChatter_7.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_8
+	{	
+		name = "supportChatter_8";
+		sound[] = { "sounds\supportChatter_8.ogg", 5, 1};	
+		titles[] = {};
+	};
+
+	class Sound_supportChatter_9
+	{	
+		name = "supportChatter_9";
+		sound[] = { "sounds\supportChatter_9.ogg", 5, 1};	
+		titles[] = {};
+	};
+};
