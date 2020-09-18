@@ -13,7 +13,7 @@ _nil = [] spawn {
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		{},
 		{},
-		{ [laserTarget casOperator, 120, 60] execVM "support.sqf"; },
+		{ [laserTarget casOperator, 120, 60, [15000,15000,0]] execVM "support.sqf"; },
 		{},
 		[],
 		5,

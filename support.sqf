@@ -8,7 +8,9 @@ if (!isServer) exitWith {};
 _targetPoint = (_this select 0);
 _supportTime = (_this select 1);
 _supportCooldown = (_this select 2);
+_spawnPoint = (_this select 3);
 
+spawnPointPersistent = _spawnPoint;
 targetPersistent = "Land_HelipadEmpty_F" createVehicle position _targetPoint;
 
 [ casOperator, 0 ] call BIS_fnc_holdActionRemove;
@@ -31,6 +33,7 @@ supportRTB = {
 	} forEach crew supportVehicle;
 
 	deleteVehicle supportVehicle;
+	deleteVehicle targetPersistent;
 
 	{
 		missionNamespace setVariable [str _x, nil];
@@ -45,7 +48,7 @@ supportRTB = {
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		{},
 		{},
-		{ [laserTarget casOperator, 120, 60] execVM "support.sqf"; },
+		{ [laserTarget casOperator, 120, 60, spawnPointPersistent] execVM "support.sqf"; },
 		{},
 		[],
 		5,
@@ -55,7 +58,7 @@ supportRTB = {
 	] remoteExec ["BIS_fnc_holdActionAdd", 0, casOperator];
 };
 
-supportVehicle = createVehicle ["B_T_VTOL_01_armed_F", [12666.1,18026.3,450], [], 0, "FLY"];
+supportVehicle = createVehicle ["B_T_VTOL_01_armed_F", _spawnPoint, [], 0, "FLY"];
 supportGroup = createVehicleCrew supportVehicle;
 supportVehicle allowDamage false;
 
@@ -81,7 +84,7 @@ supportVehicle flyInHeight 450;
 
 supportVehicle setEffectiveCommander supportActiveCommander;
 
-supportList = [supportVehicle, supportGroup, supportPilot, supportCommander, supportGunner, supportPilotGroup, targetPersistent];
+supportList = [supportVehicle, supportGroup, supportPilot, supportCommander, supportGunner, supportPilotGroup];
 
 _nil = [] spawn {
 	waitUntil { supportVehicle distance targetPersistent < 1000};
