@@ -1,4 +1,4 @@
-// _nil = ["Speaker","Line",5] execVM "titles.sqf"; Dropkick: Arriving in the AO, transfering fire control. Dropkick: We are bingo fuel, heading back to base.
+// _nil = ["Speaker","Line",5] execVM "titles.sqf";
 // Script by Ares / FunnyCookieEver
 
 private ["_name", "_text","_ulength"];
