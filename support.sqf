@@ -115,6 +115,12 @@ _wp setWaypointType "LOITER";
 supportVehicle flyInHeightASL [flightHeightPersistent, flightHeightPersistent, flightHeightPersistent];
 supportVehicle flyInHeight flightHeightPersistent;
 
+supportHint = {
+	hint composeText ["Support is on the way.", lineBreak, "Distance of arrival: ", str (supportVehicle distance targetPersistent)];
+};
+
+[] remoteExec ["supportHint", 0, true];
+
 supportVehicle setEffectiveCommander supportActiveCommander;
 
 supportList = [supportVehicle, supportGroup, supportPilot, supportCommander, supportGunner, supportPilotGroup];
