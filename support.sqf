@@ -97,7 +97,7 @@ _nil = [] spawn {
 		"_caller distance _target == 0",				
 		{},												
 		{},											
-		{ selectPlayer supportCommander; },						
+		{ selectPlayer supportCommander; casOperator allowDamage false;},						
 		{},												
 		[],												
 		2,										
@@ -114,7 +114,7 @@ _nil = [] spawn {
 		"_caller distance _target == 0",						
 		{},													
 		{},												
-		{ selectPlayer supportGunner; },						
+		{ selectPlayer supportGunner; casOperator allowDamage false;},						
 		{},												
 		[],													
 		2,													
@@ -132,6 +132,7 @@ _nil = [] spawn {
 	[ supportVehicle, 0 ] call BIS_fnc_holdActionRemove;
 	removeAllActions casOperator;
 	selectPlayer casOperator;
+	casOperator allowDamage true;
 	removeSwitchableUnit supportCommander;
 	removeSwitchableUnit supportGunner;
 	deleteWaypoint [supportPilotGroup, currentWaypoint supportPilotGroup];
@@ -158,7 +159,7 @@ _nil = [] spawn {
 	"_caller in supportVehicle",
 	{},
 	{},
-	{ selectPlayer casOperator; },
+	{ selectPlayer casOperator; casOperator allowDamage true;},
 	{},
 	[],
 	2,
