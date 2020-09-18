@@ -11,7 +11,9 @@ _supportCooldown = (_this select 2);
 _spawnPoint = (_this select 3);
 _flightHeight = (_this select 4);
 _flightRadius = (_this select 5);
+_side = (_this select 6);
 
+sidePersistent = _side;
 flightHeightPersistent = _flightHeight;
 flightRadiusPersistent = _flightRadius;
 spawnPointPersistent = _spawnPoint;
@@ -52,7 +54,7 @@ supportRTB = {
 		"('ItemRadio' in assignedItems _caller) and (currentWeapon _caller in ['Laserdesignator']) and (laserTarget casOperator != objNull)",
 		{},
 		{},
-		{ [laserTarget casOperator, 120, 60, spawnPointPersistent, flightHeightPersistent, flightRadiusPersistent] execVM "support.sqf"; },
+		{ [laserTarget casOperator, 120, 60, spawnPointPersistent, flightHeightPersistent, flightRadiusPersistent, sidePersistent] execVM "support.sqf"; },
 		{},
 		[],
 		5,
@@ -65,6 +67,14 @@ supportRTB = {
 supportVehicle = createVehicle ["B_T_VTOL_01_armed_F", _spawnPoint, [], 0, "FLY"];
 supportGroup = createVehicleCrew supportVehicle;
 supportVehicle allowDamage false;
+
+_supportSwitchSide = createGroup sidePersistent;
+
+{
+	[_x] joinSilent _supportSwitchSide;
+} forEach units supportGroup;
+
+supportVehicle setVehicleLock "LOCKED";
 
 supportPilot = driver supportVehicle;
 supportActiveCommander = commander supportVehicle;
@@ -111,7 +121,7 @@ _nil = [] spawn {
 	] remoteExec ["BIS_fnc_holdActionAdd", 0, casOperator];	
 	[
 		casOperator,										
-		"Control 25mm / 105mm",									
+		"Control 20mm / 105mm",									
 		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",	
 		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
 		"_this distance _target == 0",					
