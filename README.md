@@ -9,7 +9,7 @@ You may modify and share this script as you want but please keep license and add
   * **laserTarget casOperator** - center of loiter, target marked by laser designator.
   * **120** - time while support will be in the air since arrival near target.
   * **60** - cooldown time untill next support will be available.
-  * **[15000,15000,0]** - locaction on map where CAS will be spawned.
+  * **[15000,15000,0]** - location on map where CAS will be spawned.
 * Place unit that should be able to call CAS and set its variable name to casOperator.
 * Make sure unit has **radio** and **laser designator** equipped.
 
