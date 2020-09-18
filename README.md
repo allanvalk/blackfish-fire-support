@@ -4,7 +4,7 @@ You may modify and share this script as you want but please keep license and add
 ## Setup
 * Download all files and place them in to the mission folder.
 * Merge files if they already exist in the mission folder.
-* In the [init.sqf](init.sqf) file change script config as you wish:
+* In the [init.sqf](https://github.com/allanvalk/blackfish-fire-support/blob/c1aa153849fe9ff0467406fc51352ce2194b1623/init.sqf#L18) file change script config as you wish:
   * `[laserTarget casOperator, 120, 60, [15000,15000,0], 450, 350, west] execVM "support.sqf";`
   * **laserTarget casOperator** - center of loiter, target marked by laser designator.
   * **120** - time while support will be in the air since arrival near target.
