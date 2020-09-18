@@ -16,6 +16,6 @@ You may modify and share this script as you want but please keep license and add
 * Make sure unit has **radio** and **laser designator** equipped.
 
 ## Known Bugs
-* ~~`laserTarget casOperator != objNull` condition doesn't care if laser off, because for some reason laser target constantly exits at unknown coordinates.~~
+* ~~`laserTarget casOperator != objNull` condition doesn't care if laser off, because for some reason laser target constantly exits at unknown coordinates.~~ - Fixed
 * Make sure unit has designator batteries and laser designator is **on**.
 * Support of this script in **multiplayer** or on a **dedicated server** is not tested.
