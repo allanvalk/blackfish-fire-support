@@ -68,18 +68,18 @@ supportVehicle = createVehicle ["B_T_VTOL_01_armed_F", _spawnPoint, [], 0, "FLY"
 supportGroup = createVehicleCrew supportVehicle;
 supportVehicle allowDamage false;
 
-_supportSwitchSide = createGroup sidePersistent;
-
-{
-	[_x] joinSilent _supportSwitchSide;
-} forEach units supportGroup;
-
 supportVehicle setVehicleLock "LOCKED";
 
 supportPilot = driver supportVehicle;
 supportActiveCommander = commander supportVehicle;
 supportCommander = supportVehicle turretUnit [2];
 supportGunner = gunner supportVehicle;
+
+_supportSwitchSide = createGroup sidePersistent;
+
+{
+	[_x] joinSilent _supportSwitchSide;
+} forEach units supportGroup;
 
 [supportPilot] join grpNull;
 supportPilotGroup = group supportPilot;
@@ -88,6 +88,8 @@ supportPilot disableAI "SUPPRESSION";
 supportPilot disableAI "COVER";
 supportPilot disableAI "AUTOCOMBAT";
 supportPilot disableAI "COVER";
+supportPilot disableAI "AUTOTARGET";
+supportPilot disableAI "TARGET";
 
 _wp = supportPilotGroup addWaypoint [getPos targetPersistent, 0];
 _wp setWaypointType "LOITER";
